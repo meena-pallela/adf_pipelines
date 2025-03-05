@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "exchange rate 1.csv",
+				"fileName": "orders.csv",
 				"container": "source"
 			},
 			"columnDelimiter": ",",
