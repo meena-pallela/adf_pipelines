@@ -1,0 +1,27 @@
+{
+	"name": "to_database",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL_DB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"enter_schema_name": {
+				"type": "string"
+			},
+			"enter_table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "myschema",
+			"table": {
+				"value": "@dataset().enter_table_name",
+				"type": "Expression"
+			}
+		}
+	}
+}
