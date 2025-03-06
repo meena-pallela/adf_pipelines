@@ -9,6 +9,12 @@
 					"referenceName": "PL_ADF_QUESTION_1",
 					"type": "PipelineReference"
 				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "PL_RESTAPI_TO_BLOB",
+					"type": "PipelineReference"
+				}
 			}
 		],
 		"type": "ScheduleTrigger",
