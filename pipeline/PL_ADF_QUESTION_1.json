@@ -113,9 +113,9 @@
 												"referenceName": "to_database",
 												"type": "DatasetReference",
 												"parameters": {
-													"enter_schema_name": "myschema",
+													"enter_schema_name": "stageschema",
 													"enter_table_name": {
-														"value": "@item().name",
+														"value": "@replace(item().name,'.xlsx','')",
 														"type": "Expression"
 													}
 												}
@@ -171,7 +171,7 @@
 												"type": "DatasetReference",
 												"parameters": {
 													"file_name": {
-														"value": "@item().name",
+														"value": "item().name",
 														"type": "Expression"
 													}
 												}
@@ -182,9 +182,9 @@
 												"referenceName": "to_database",
 												"type": "DatasetReference",
 												"parameters": {
-													"enter_schema_name": "myschema",
+													"enter_schema_name": "stageschema",
 													"enter_table_name": {
-														"value": "@item().name",
+														"value": "@replace(item().name,'.csv','')\n",
 														"type": "Expression"
 													}
 												}
