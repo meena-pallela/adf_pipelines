@@ -2,7 +2,7 @@
 	"name": "DelimitedText1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "linked_service_blob",
+			"referenceName": "linked_service_blob_storage",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "orders.csv",
-				"container": "source"
+				"fileName": "customers.csv",
+				"container": "csvfiles"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
