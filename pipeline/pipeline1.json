@@ -54,8 +54,8 @@
 						"referenceName": "AzureSqlTable1",
 						"type": "DatasetReference",
 						"parameters": {
-							"schema": "newschema",
-							"table": "newtable"
+							"myschema": "myschema",
+							"triggercheck": "triggerchecktable"
 						}
 					}
 				]
