@@ -1,0 +1,23 @@
+{
+	"name": "change_type",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_service_csv",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Day-1.csv",
+				"container": "dataset-assessment"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
