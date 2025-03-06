@@ -1,0 +1,31 @@
+{
+	"name": "stored_procedure_result",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "linked_service_AzureSqlDatabase",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"enter_schema_name": {
+				"type": "string"
+			},
+			"enter_table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().enter_schema_name",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().enter_table_name",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,9 @@
+{
+	"name": "azuredatafactoryadfp",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "e7a11864-24a0-4a70-9fdd-22f7b6cb9248",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
