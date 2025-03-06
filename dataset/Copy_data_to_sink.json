@@ -1,0 +1,30 @@
+{
+	"name": "Copy_data_to_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_ASQL_DB",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"enter_schema_name": {
+				"type": "string"
+			},
+			"enter_table_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().enter_schema_name",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().enter_table_name",
+				"type": "Expression"
+			}
+		}
+	}
+}
