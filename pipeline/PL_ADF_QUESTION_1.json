@@ -113,7 +113,7 @@
 												"referenceName": "to_database",
 												"type": "DatasetReference",
 												"parameters": {
-													"enter_schema_name": "stageschema",
+													"enter_schema_name": "myschema",
 													"enter_table_name": {
 														"value": "@item().name",
 														"type": "Expression"
@@ -182,7 +182,7 @@
 												"referenceName": "to_database",
 												"type": "DatasetReference",
 												"parameters": {
-													"enter_schema_name": "stageschema",
+													"enter_schema_name": "myschema",
 													"enter_table_name": {
 														"value": "@item().name",
 														"type": "Expression"
