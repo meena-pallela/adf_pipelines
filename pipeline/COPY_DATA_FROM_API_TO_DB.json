@@ -1,0 +1,54 @@
+{
+	"name": "COPY_DATA_FROM_API_TO_DB",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_Data_From_RESTAPI_to_DB",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "RestSource",
+						"httpRequestTimeout": "00:01:40",
+						"requestInterval": "00.00:00:00.010",
+						"requestMethod": "GET",
+						"paginationRules": {
+							"supportRFC5988": "true"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "Rest_API_source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Copy_data_to_sink",
+						"type": "DatasetReference",
+						"parameters": {
+							"enter_schema_name": "myschema",
+							"enter_table_name": "detailsfromapi"
+						}
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}
